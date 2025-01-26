@@ -11,8 +11,6 @@ app = Flask(__name__)
 
 # Load sentence transformer model
 model = SentenceTransformer('all-MiniLM-L6-v2')
-
-# Initialize text generation model (e.g., GPT-2)
 generator = pipeline("text-generation", model="gpt-2")
 
 
@@ -33,6 +31,7 @@ def store_chat_history(role, content):
 
 # Route to handle the chatbot query
 @app.route('/chat', methods=['POST'])
+
 def chat():
     data = request.get_json()
     user_query = data['query']
@@ -47,7 +46,6 @@ def chat():
     # Retrieve the actual text chunks from the indices
     relevant_chunks = [chunks[i] for i in relevant_chunk_indices[0]]
 
-    # Generate an answer using GPT-2
     context = " ".join(relevant_chunks)
     prompt = f"Question: {user_query}\nContext: {context}\nAnswer:"
     answer = generator(prompt, max_length=100)[0]['generated_text']
