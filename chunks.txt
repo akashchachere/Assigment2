@@ -1,0 +1,2 @@
+Artificial Intelligence (AI) is intelligence demonstrated by machines, in contrast to the natural intelligence displayed by humans and animals. Leading AI textbooks define the field as the study of 'intelligent agents': any device that perceives its environment and takes actions that maximize its chance of successfully achieving its goals.
+Machine learning (ML) is a branch of AI that focuses on the development of algorithms that allow computers to learn and make decisions from data, without explicit programming.
