@@ -26,8 +26,4 @@ Setup Instructions
 4. Generate Embedding
 5. Run the Flask API
 
-API Endpoints
-
-1. POST /chat
-2. GET /history
 
